@@ -1,4 +1,4 @@
-# Meta-Hub
+# PeakMeta
 
 Interactive tier list maker and character build tool.  
 Chat to generate custom rankings, optimized builds, team compositions, and more for your favorite games — all in a clean, modern UI.
