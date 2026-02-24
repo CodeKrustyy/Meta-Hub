@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Meta-Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive tier list maker and character build tool.  
+Chat to generate custom rankings, optimized builds, team compositions, and more for your favorite games — all in a clean, modern UI.
 
-Currently, two official plugins are available:
+[![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.19-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-latest-000?logo=shadcn&logoColor=white)](https://ui.shadcn.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Demo: [https://meta-hub.vercel.app](https://meta-hub.vercel.app) (update with your actual Vercel URL once deployed)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📊 **Tier Lists** — Drag-and-drop ranking of characters/heroes/agents with S–F tiers
+- 🛠️ **Character Builds** — Detailed gear, skills, artifacts, weapons, synergies, and counters
+- 💬 **Chat Builder** — Interactive chat to create/customize tier lists and builds on the fly (AI-assisted or rule-based)
+- 🎨 Modern UI powered by **shadcn/ui** (40+ accessible components: cards, tables, dialogs, inputs, tooltips, etc.)
+- Responsive design with **Tailwind CSS**
+- Type-safe with **TypeScript**
 
-## Expanding the ESLint configuration
+Perfect for theorycrafters, meta analysts, and gamers who want quick, shareable optimizations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: React + TypeScript + Vite (fast dev & build)
+- **Styling**: Tailwind CSS v3.4.19 + shadcn/ui (beautiful, customizable components)
+- **Build Tool**: Vite v7.2.4
+- **Runtime**: Node.js 20+
+- **Deployment**: Vercel (auto deploys from GitHub)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Node.js >= 20
+- npm (or pnpm/yarn)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/CodeKrustyy/Meta-Hub.git
+   cd Meta-Hub
